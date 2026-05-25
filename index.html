@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111111">
+    <title>Carta Digital</title>
+    <link rel="preload" as="image" href="assets/mockup.webp">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero" id="inicio">
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/mockup.webp" alt="">
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Bar-restaurante informal</p>
+          <h1>Carta Digital</h1>
+          <p class="subtitle">Tapas, platos combinados y cocina china</p>
+          <button class="primary-action" type="button" data-scroll-menu>Ver carta</button>
+          <p class="microcopy">Carta visual interactiva · Precios actualizados · Información de alérgenos</p>
+        </div>
+      </header>
+
+      <main class="menu" id="menu-start" tabindex="-1">
+        <nav class="section-nav" aria-label="Secciones de la carta">
+          <div class="section-nav__track" id="sectionNav"></div>
+        </nav>
+
+        <div class="menu-intro">
+          <p class="eyebrow">Explora la carta</p>
+          <h2>Sabores de bar, tapas y cocina china sencilla</h2>
+        </div>
+
+        <div id="menuSections" class="sections"></div>
+      </main>
+    </div>
+
+    <div class="modal" id="productModal" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal__close" type="button" aria-label="Cerrar" data-close-modal>×</button>
+        <div class="modal__content" id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
